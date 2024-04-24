@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotation Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Rotation Game</h1>
+        <div class="dice-container">
+            <img id="dice1" class="dice" src="diceImage/dice-1.png" alt="Dice 1">
+            <img id="dice2" class="dice" src="diceImage/dice-1.png" alt="Dice 1">
+        </div>
+        <div class="players">
+            <div id="player1" class="player active">
+                <h2>Player 1</h2>
+                <p>Score: <span id="player1Score">0</span></p>
+            </div>
+            <div id="player2" class="player">
+                <h2>Player 2</h2>
+                <p>Score: <span id="player2Score">0</span></p>
+            </div>
+        </div>
+        <button id="rollDiceButton" onclick="rollDice()">Roll Dice</button>
+        <ul id="results"></ul>
+        <!-- Modal -->
+        <div id="roundModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Round Results</h2>
+                <p><span id="player1NameRound">Player 1</span> rolled: <span id="player1Round"></span></p>
+                <p><span id="player2NameRound">Player 2</span> rolled: <span id="player2Round"></span></p>
+                <p>Winner: <span id="roundWinner"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/game.js"></script>  
+    <script src="js/gametest.js"></script>  
+    
+ </body>
+</html>
